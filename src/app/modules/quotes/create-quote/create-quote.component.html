@@ -1,0 +1,12 @@
+<div class="ui three item menu">
+    <a class="item" routerLink="/quotes">Quotes List</a>
+    <a class="item" routerLink="../">Create Post</a>
+    <a class="item" routerLink="/">Logout</a>
+</div>
+<form class="ui form" [formGroup]="quoteForm" (ngSubmit)="onSubmit()">
+    <div class="field">
+        <label>Quote</label>
+        <textarea name="quote" placeholder="Enter Quote" formControlName="quote"></textarea>
+    </div>
+    <button class="ui button" type="submit">Submit</button>
+</form>

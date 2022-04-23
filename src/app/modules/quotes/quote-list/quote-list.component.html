@@ -1,0 +1,26 @@
+<div class="ui three item menu">
+    <a class="item" routerLink="/quotes">Quotes List</a>
+    <a class="item" routerLink="./create">Create Post</a>
+    <a class="item" routerLink="/">Logout</a>
+</div>
+<div class="ui comments">
+    <h3 class="ui dividing header">Quotes</h3>
+    <div class="comment" *ngFor="let item of quotes">
+        <a class="avatar">
+            <img src="assets/elliot.jpg">
+        </a>
+        <div class="content">
+            <a class="author">{{ item.USER.firstname}} {{ item.USER.lastname }} </a>
+            <div class="metadata">
+                <span class="date">{{ item.createdAt | date }}</span>
+            </div>
+            <div class="text">
+                {{ item.quote }}
+            </div>
+            <div class="actions" *ngIf="user === item.USER._id">
+                <a class="reply" (click)="editQuote(item)">Edit</a>
+                <a class="reply" (click)="deleteQuote(item._id)">Delete</a>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,15 @@
+<div class="ui two item menu">
+    <a class="item">Login</a>
+    <a class="item" routerLink="/signup">Signup</a>
+</div>
+<form class="ui form" [formGroup]="loginForm" (ngSubmit)="onLogin()">
+    <div class="field">
+        <label>Email</label>
+        <input type="email" name="email" placeholder="Enter Email" formControlName="email">
+    </div>
+    <div class="field">
+        <label>Password</label>
+        <input type="password" name="password" placeholder="Enter Password" formControlName="password">
+    </div>
+    <button class="ui button" type="submit">Login</button>
+</form>

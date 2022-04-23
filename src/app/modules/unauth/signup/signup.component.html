@@ -1,0 +1,26 @@
+<div class="ui middle aligned center aligned grid">
+    <div class="ui two item menu">
+        <a class="item" routerLink="/">Login</a>
+        <a class="item" routerLink="/signup">Signup</a>
+    </div>
+    <form class="ui large form" [formGroup]="profileForm" (ngSubmit)="onSave()">
+        <div class="field">
+            <label>First Name</label>
+            <input type="text" name="firstname" placeholder="First Name" formControlName="firstname">
+        </div>
+        <div class="field">
+            <label>Last Name</label>
+            <input type="text" name="lastname" placeholder="Last Name" formControlName="lastname">
+        </div>
+        <div class="field">
+            <label>Email</label>
+            <input type="email" name="email" placeholder="Enter Email" formControlName="email">
+        </div>
+        <div class="field">
+            <label>Password</label>
+            <input type="password" name="password" placeholder="Enter Password" formControlName="password">
+        </div>
+        <button class="ui button" type="submit">Submit</button>
+    </form>
+
+</div>
